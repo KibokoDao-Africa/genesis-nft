@@ -1,6 +1,25 @@
 import { Button, Typography, Box, Paper } from "@mui/material";
 import Typewriter from "react-typewriter-effect";
 import backgroundImage from "../assets/images/downloads/hero-background.jpg";
+import { useWeb3React } from "@web3-react/core";
+import { InjectedConnector } from "@web3-react/injected-connector";
+
+
+const injected = new InjectedConnector({
+  supportedChainIds: [8453], 
+});
+
+const HeroSection = () => {
+  const { active, activate, error } = useWeb3React();
+
+  const connectWallet = async () => {
+    try {
+      await activate(injected);
+    } catch (err) {
+      console.error("Failed to connect wallet:", err);
+    }
+  };
+
 
 const HeroSection = () => (
   <Box
