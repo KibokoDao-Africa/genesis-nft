@@ -1,26 +1,34 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Button, Typography, Box, Paper } from "@mui/material";
 import Typewriter from "react-typewriter-effect";
 import backgroundImage from "../assets/images/downloads/hero-background.jpg";
-import { BrowserProvider } from "ethers"; // Use BrowserProvider in v6
+import nftImage1 from "../assets/images/niger/Niger.png";
+import nftImage2 from "../assets/images/kenya/kenya.png";
+import nftImage3 from "../assets/images/nigeria/Nigeria.png";
+import { BrowserProvider } from "ethers";
 
 const HeroSection = () => {
   const [account, setAccount] = useState(null);
   const [error, setError] = useState(null);
+  const [currentImage, setCurrentImage] = useState(0);
+
+  const nftImages = [nftImage1, nftImage2, nftImage3];
+
+  // Image shuffling effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentImage((prev) => (prev + 1) % nftImages.length);
+    }, 2000); // Change every 2 seconds
+    return () => clearInterval(interval);
+  }, []);
 
   const connectWallet = async () => {
     try {
-      // Check if window.ethereum is available (MetaMask or other injected wallets)
       if (window.ethereum) {
-        // Use BrowserProvider for MetaMask
-        const provider = new BrowserProvider(window.ethereum); // Corrected for v6
-        const signer = await provider.getSigner(); // Get signer (connected wallet)
-
-        // Get the connected account address
+        const provider = new BrowserProvider(window.ethereum);
+        const signer = await provider.getSigner();
         const userAccount = await signer.getAddress();
         setAccount(userAccount);
-
-        // Optionally: Get the network details
         const network = await provider.getNetwork();
         console.log("Connected to network:", network);
       } else {
@@ -48,6 +56,7 @@ const HeroSection = () => {
         backgroundPosition: "center",
       }}
     >
+      {/* Background Overlay */}
       <Box
         sx={{
           position: "absolute",
@@ -59,6 +68,35 @@ const HeroSection = () => {
           zIndex: 1,
         }}
       />
+
+      {/* Connect Wallet Button */}
+      <Box
+        sx={{
+          position: "absolute",
+          top: 20,
+          right: 20,
+          zIndex: 3,
+        }}
+      >
+        <Button
+          variant="contained"
+          sx={{
+            backgroundColor: "#ED058A",
+            color: "#fff",
+            textTransform: "none",
+            fontFamily: "Montserrat, sans-serif",
+            fontSize: "12pt",
+            borderRadius: "30px",
+            padding: "8px 16px",
+            ":hover": { backgroundColor: "#FB6269" },
+          }}
+          onClick={connectWallet}
+        >
+          {account ? `Connected: ${account.slice(0, 6)}...` : "Connect Wallet"}
+        </Button>
+      </Box>
+
+      {/* Main Content */}
       <Box sx={{ position: "relative", zIndex: 2, color: "#fff" }}>
         <Typography
           variant="h2"
@@ -103,30 +141,32 @@ const HeroSection = () => {
               loop={true}
             />
           </Box>
-          <Button
-            variant="contained"
-            sx={{
-              backgroundColor: "#ED058A",
-              color: "#fff",
-              mt: 3,
-              fontFamily: "Montserrat, sans-serif",
-              fontSize: "14pt",
-              padding: "8px 20px",
-              textTransform: "none",
-              borderRadius: "30px",
-              ":hover": { backgroundColor: "#FB6269" },
-              transition: "all 0.3s ease",
-            }}
-            onClick={connectWallet}
-          >
-            {account ? `Connected: ${account.slice(0, 6)}...` : "Connect Wallet"}
-          </Button>
-          {error && (
-            <Typography sx={{ color: "red", marginTop: "10px" }}>
-              Error: {error}
-            </Typography>
-          )}
         </Paper>
+      </Box>
+
+      {/* NFT Image Shuffling */}
+      <Box
+        sx={{
+          position: "absolute",
+          bottom: 20,
+          zIndex: 2,
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "100%",
+        }}
+      >
+        <img
+          src={nftImages[currentImage]}
+          alt="NFT"
+          style={{
+            width: "150px",
+            height: "150px",
+            borderRadius: "10px",
+            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
+            transition: "opacity 0.5s ease-in-out",
+          }}
+        />
       </Box>
     </Box>
   );
