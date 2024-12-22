@@ -4,6 +4,7 @@ import Typewriter from "react-typewriter-effect";
 import backgroundImage from "../assets/images/downloads/hero-background.jpg";
 import nftImage1 from "../assets/images/niger/Niger.png";
 import nftImage2 from "../assets/images/kenya/kenya.png";
+import nftImage4 from "../assets/images/ethiopia/Ethiopia.png";
 import nftImage3 from "../assets/images/nigeria/Nigeria.png";
 import { BrowserProvider } from "ethers";
 
@@ -12,7 +13,7 @@ const HeroSection = () => {
   const [error, setError] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
-  const nftImages = [nftImage1, nftImage2, nftImage3];
+  const nftImages = [nftImage1, nftImage2, nftImage3, nftImage4];
 
   // Image shuffling effect
   useEffect(() => {
