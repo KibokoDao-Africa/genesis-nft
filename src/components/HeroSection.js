@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Button, Typography, Box, Paper } from "@mui/material";
+import { Button, Typography, Box } from "@mui/material";
 import Typewriter from "react-typewriter-effect";
 import backgroundImage from "../assets/images/downloads/hero-background.jpg";
 import nftImage1 from "../assets/images/niger/Niger.png";
@@ -10,7 +10,6 @@ import { BrowserProvider } from "ethers";
 
 const HeroSection = () => {
   const [account, setAccount] = useState(null);
-  const [error, setError] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
   const nftImages = [nftImage1, nftImage2, nftImage3, nftImage4];
@@ -21,7 +20,7 @@ const HeroSection = () => {
       setCurrentImage((prev) => (prev + 1) % nftImages.length);
     }, 2000); // Change every 2 seconds
     return () => clearInterval(interval);
-  }, []);
+  }, [nftImages.length]);
 
   const connectWallet = async () => {
     try {
@@ -30,14 +29,12 @@ const HeroSection = () => {
         const signer = await provider.getSigner();
         const userAccount = await signer.getAddress();
         setAccount(userAccount);
-        const network = await provider.getNetwork();
-        console.log("Connected to network:", network);
+        console.log("Connected to network:", await provider.getNetwork());
       } else {
         throw new Error("Please install MetaMask or another Ethereum wallet.");
       }
     } catch (err) {
       console.error("Error connecting wallet:", err);
-      setError(err.message);
     }
   };
 
@@ -45,7 +42,7 @@ const HeroSection = () => {
     <Box
       sx={{
         position: "relative",
-        height: "60vh",
+        height: "80vh",
         display: "flex",
         justifyContent: "center",
         alignItems: "center",
@@ -98,7 +95,7 @@ const HeroSection = () => {
       </Box>
 
       {/* Main Content */}
-      <Box sx={{ position: "relative", zIndex: 2, color: "#fff" }}>
+      <Box sx={{ position: "relative", zIndex: 2, color: "#fff", maxWidth: "600px" }}>
         <Typography
           variant="h2"
           sx={{
@@ -110,46 +107,41 @@ const HeroSection = () => {
         >
           KibokoDAO NFT Minting
         </Typography>
-        <Paper
-          elevation={6}
+        <Box
           sx={{
             padding: "20px",
             borderRadius: "12px",
-            backgroundColor: "rgba(255, 255, 255, 0.9)",
-            maxWidth: "600px",
-            width: "90%",
+            backgroundColor: "transparent",
             textAlign: "center",
           }}
         >
-          <Box>
-            <Typewriter
-              textStyle={{
-                fontFamily: "Montserrat, sans-serif",
-                fontWeight: "500",
-                fontSize: "16pt",
-                color: "#18163C",
-              }}
-              startDelay={500}
-              cursorColor="#ED058A"
-              multiText={[
-                "Mint your exclusive NFT and celebrate Africa's diversity.",
-                "Join the future of Web3 in Africa!",
-                "Be part of the KibokoDAO community today!",
-              ]}
-              multiTextDelay={2000}
-              typeSpeed={50}
-              deleteSpeed={30}
-              loop={true}
-            />
-          </Box>
-        </Paper>
+          <Typewriter
+            textStyle={{
+              fontFamily: "Montserrat, sans-serif",
+              fontWeight: "500",
+              fontSize: "16pt",
+              color: "#fff",
+            }}
+            startDelay={500}
+            cursorColor="#ED058A"
+            multiText={[
+              "Mint your exclusive NFT and celebrate Africa's diversity.",
+              "Join the future of Web3 in Africa!",
+              "Be part of the KibokoDAO community today!",
+            ]}
+            multiTextDelay={2000}
+            typeSpeed={50}
+            deleteSpeed={30}
+            loop={true}
+          />
+        </Box>
       </Box>
 
       {/* NFT Image Shuffling */}
       <Box
         sx={{
           position: "absolute",
-          bottom: 20,
+          bottom: "10%",
           zIndex: 2,
           display: "flex",
           justifyContent: "center",
@@ -161,10 +153,10 @@ const HeroSection = () => {
           src={nftImages[currentImage]}
           alt="NFT"
           style={{
-            width: "150px",
-            height: "150px",
+            width: "200px",
+            height: "200px",
             borderRadius: "10px",
-            boxShadow: "0px 4px 10px rgba(0, 0, 0, 0.5)",
+            boxShadow: "0px 4px 15px rgba(0, 0, 0, 0.5)",
             transition: "opacity 0.5s ease-in-out",
           }}
         />
