@@ -1,0 +1,19 @@
+{
+    "name": "Ghana #13",
+    "description": "KibokoDAO NFT representing Ghana. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeig6l4jxvhm2n2vhpkmkvandlchdmyvdicssp3tzq2ojeq65rfklru",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Ghana"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "13/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

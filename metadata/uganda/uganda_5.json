@@ -1,0 +1,19 @@
+{
+    "name": "Uganda #5",
+    "description": "KibokoDAO NFT representing Uganda. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeiddxbwshhbzuwrxxqviue5k7cwegyrgua23lobznglmel672nrt6u",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Uganda"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "5/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

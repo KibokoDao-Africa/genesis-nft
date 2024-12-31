@@ -1,0 +1,19 @@
+{
+    "name": "Kenya #10",
+    "description": "KibokoDAO NFT representing Kenya. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeiggilqfqs4652lh4fhxky2u74p7fymycvusr3sbl6sjskbpog2kf4",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Kenya"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "10/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

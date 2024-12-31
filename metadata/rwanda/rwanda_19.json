@@ -1,0 +1,19 @@
+{
+    "name": "Rwanda #19",
+    "description": "KibokoDAO NFT representing Rwanda. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeiadbgu5nnojfslohiklxby3qtutnp4sjdh4yhif5ujev7edm3tqiq",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Rwanda"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "19/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

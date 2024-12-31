@@ -1,0 +1,19 @@
+{
+    "name": "Angola #17",
+    "description": "KibokoDAO NFT representing Angola. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeih2lbp6j5wvg4gle7xqjwjbaojxob5nwd4rtxjt35ystdvd7sfwxe",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Angola"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "17/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

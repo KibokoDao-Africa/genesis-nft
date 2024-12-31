@@ -1,0 +1,19 @@
+{
+    "name": "Ethiopia #4",
+    "description": "KibokoDAO NFT representing Ethiopia. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeib5rxgfbiuhmnk6tyqroewuhoj7acdnfpacu7edezfjlsxcnrbxky",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Ethiopia"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "4/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Zimbabwe #15",
+    "description": "KibokoDAO NFT representing Zimbabwe. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeicodvtahb5cwd5juo63vvikmyfrk6j2kc3rblbuytilzj7uhzayly",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Zimbabwe"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "15/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

@@ -1,0 +1,19 @@
+{
+    "name": "Nigeria #2",
+    "description": "KibokoDAO NFT representing Nigeria. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeiaprdu562vuxxb5hiico5hhtinz2irgxrmujwadpx7titpckpidpy",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Nigeria"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "2/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

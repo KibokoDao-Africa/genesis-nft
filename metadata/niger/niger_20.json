@@ -1,0 +1,19 @@
+{
+    "name": "Niger #20",
+    "description": "KibokoDAO NFT representing Niger. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeidrizym55erbqrgw75hh7axontydz7223csomxu5dac5n7rh4b63u",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Niger"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "20/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}
