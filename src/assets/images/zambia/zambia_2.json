@@ -1,0 +1,19 @@
+{
+    "name": "Zambia #2",
+    "description": "KibokoDAO NFT representing Zambia. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeibjnbirf3tngq42j6ch6eppegtyeaqancqeiugmvws2cqvrliggvu",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "Zambia"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "2/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}

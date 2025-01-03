@@ -6,13 +6,22 @@ import nftImage1 from "../assets/images/niger/Niger.png";
 import nftImage2 from "../assets/images/kenya/kenya.png";
 import nftImage4 from "../assets/images/ethiopia/Ethiopia.png";
 import nftImage3 from "../assets/images/nigeria/Nigeria.png";
+import nftImage5 from "../assets/images/sierra/Sierra.png";
+import nftImage6 from "../assets/images/ghana/Ghana.png";
+import nftImage7 from "../assets/images/uganda/Uganda.png";
+import nftImage8 from "../assets/images/rwanda/Rwanda.png";
+import nftImage9 from "../assets/images/south/south africa.png";
+import nftImage10 from "../assets/images/zambia/zambia.png";
+import nftImage11 from "../assets/images/zimbabwe/zimbabwe.png";
+import nftImage12 from "../assets/images/angola/angola.png";
 import { BrowserProvider } from "ethers";
 
 const HeroSection = () => {
   const [account, setAccount] = useState(null);
   const [currentImage, setCurrentImage] = useState(0);
 
-  const nftImages = [nftImage1, nftImage2, nftImage3, nftImage4];
+  const nftImages = [nftImage1, nftImage2, nftImage3, nftImage4,nftImage5,
+    nftImage6,nftImage7,nftImage8, nftImage9, nftImage10, nftImage11, nftImage12];
 
   // Image shuffling effect
   useEffect(() => {

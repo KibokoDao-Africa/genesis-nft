@@ -1,0 +1,19 @@
+{
+    "name": "South Africa #10",
+    "description": "KibokoDAO NFT representing South Africa. Limited edition of 20 pieces.",
+    "image": "ipfs://bafybeief6qafjllnwt2xbskqy62vms2danxjftlh6amdxcowwr2hh6teiy",
+    "attributes": [
+        {
+            "trait_type": "Country",
+            "value": "South Africa"
+        },
+        {
+            "trait_type": "Edition",
+            "value": "10/20"
+        },
+        {
+            "trait_type": "Rarity",
+            "value": "Super Rare"
+        }
+    ]
+}
